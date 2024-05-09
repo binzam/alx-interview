@@ -22,7 +22,7 @@ def validUTF8(data):
                 next_body = list(
                     map(
                         lambda x: x & 0b11000000 == 0b10000000,
-                        data[i + 1 : i + span],
+                        data[i + 1: i + span],
                     )
                 )
                 if not all(next_body):
@@ -37,7 +37,7 @@ def validUTF8(data):
                 next_body = list(
                     map(
                         lambda x: x & 0b11000000 == 0b10000000,
-                        data[i + 1 : i + span],
+                        data[i + 1: i + span],
                     )
                 )
                 if not all(next_body):
@@ -52,7 +52,7 @@ def validUTF8(data):
                 next_body = list(
                     map(
                         lambda x: x & 0b11000000 == 0b10000000,
-                        data[i + 1 : i + span],
+                        data[i + 1: i + span],
                     )
                 )
                 if not all(next_body):
