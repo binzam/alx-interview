@@ -9,7 +9,7 @@ const getCharacterName = (url) => {
       if (error) {
         reject(error);
       }
-      if (response && response.statusCode == 200) {
+      if (response && response.statusCode === 200) {
         const characterName = JSON.parse(body).name;
         resolve(characterName);
       }
@@ -22,7 +22,7 @@ const getMovieCharacters = (movieId) => {
       if (error) {
         reject(error);
       }
-      if (response && response.statusCode == 200) {
+      if (response && response.statusCode === 200) {
         const charactersURL = JSON.parse(body).characters;
         const characterPromises = charactersURL.map((url) =>
           getCharacterName(url)
